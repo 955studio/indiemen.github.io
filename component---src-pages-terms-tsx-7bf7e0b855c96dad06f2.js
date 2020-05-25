@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{tmBl:function(e,n,t){"use strict";t.r(n);var a=t("Wbzz"),o=t("q1tI"),r=t.n(o),l=t("Bl7J"),i=t("vrFN");n.default=function(e){return r.a.createElement(l.a,null,r.a.createElement(i.a,{title:"Terms and Conditions"}),r.a.createElement("h1",null,"Terms and Conditions"),r.a.createElement("p",null,"Work in Progress: (",e.path,")"),r.a.createElement(a.Link,{to:"/"},"Go back to the homepage"))}}}]);
+//# sourceMappingURL=component---src-pages-terms-tsx-7bf7e0b855c96dad06f2.js.map
