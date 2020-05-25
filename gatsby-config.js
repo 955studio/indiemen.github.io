@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Indie.Men`,
+    title: `INDIE.MEN`,
     description: `The community of independent creators.`,
     author: `@firede`,
   },
@@ -18,11 +18,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `INDIE.MEN`,
+        short_name: `indiemen`,
         start_url: `/`,
-        background_color: `#334659`,
-        theme_color: `#334659`,
+        background_color: `#025064`,
+        theme_color: `#025064`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
