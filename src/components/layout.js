@@ -12,7 +12,8 @@ import { useIntl } from "gatsby-plugin-intl"
 
 import Header from "./header"
 import Footer from "./footer"
-import "./layout.css"
+// import "./layout.css"
+import "./style.css"
 
 const Layout = ({ children }) => {
   const intl = useIntl()

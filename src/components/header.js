@@ -6,7 +6,6 @@ import Logo from "./logo"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `#025064`,
       marginBottom: `1.45rem`,
     }}>
     <div

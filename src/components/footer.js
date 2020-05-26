@@ -5,7 +5,6 @@ import TinyLogo from "./tiny-logo"
 const Footer = () => (
   <footer
     style={{
-      background: `#025064`,
       marginBottom: `1.45rem`,
     }}>
     <div
