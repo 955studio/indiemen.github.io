@@ -1,12 +1,13 @@
 {
   "name": "indiemen-website",
   "private": true,
-  "description": "Indie.Men website",
+  "description": "INDIE.MEN website",
   "version": "0.1.0",
   "author": "Firede <firede@firede.us>",
   "dependencies": {
     "gatsby": "^2.21.37",
     "gatsby-image": "^2.4.4",
+    "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-manifest": "^2.4.5",
     "gatsby-plugin-offline": "^3.2.3",
     "gatsby-plugin-react-helmet": "^3.3.1",
