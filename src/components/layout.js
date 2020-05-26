@@ -30,15 +30,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={intl.formatMessage({ id: "title" }) || data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}>
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }

@@ -2,8 +2,9 @@ html {
   background-color: #025064;
 }
 body {
-  padding: 0 5%;
+  padding: 0 1.5em;
   color: #fff;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   line-height: 1.5;
   text-size-adjust: 100%;
 }
@@ -15,6 +16,35 @@ body::after {
   right: 0;
   height: 100%;
   z-index: -1;
-  background: url(../images/wave.jpg) 88% 55%;
+  background: url(../images/wave.jpg) 70% 55%;
   background-size: cover;
+}
+
+p {
+  margin: 1.5em 0;
+}
+p.bigger {
+  font-size: 1.4em;
+  margin-top: 0.2em;
+}
+
+a {
+  color: #fff;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (min-aspect-ratio: 1920 / 1280) {
+  body {
+    margin: 8vh 9% 3vh 50%;
+  }
+}
+
+@media (max-aspect-ratio: 1920 / 1280) {
+  body {
+    max-width: 48vh;
+    margin: 8vh 6% 3vh auto;
+  }
 }
