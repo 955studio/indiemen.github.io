@@ -1,4 +1,5 @@
-import { Link, PageProps } from "gatsby"
+import { PageProps } from "gatsby"
+import { Link } from "gatsby-plugin-intl"
 // Gatsby supports TypeScript natively!
 import React from "react"
 import Layout from "../components/layout"
