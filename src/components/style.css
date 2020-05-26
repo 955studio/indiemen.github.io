@@ -20,11 +20,26 @@ body::after {
   background-size: cover;
 }
 
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #025064;
+}
+
 p {
   margin: 1.5em 0;
 }
 p.bigger {
-  font-size: 1.4em;
+  font-size: 1.35em;
   margin-top: 0.2em;
 }
 
@@ -34,6 +49,10 @@ a {
   border: none;
   text-decoration: none;
   font-weight: 700;
+}
+a:hover {
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.2s;
 }
 
 @media (min-aspect-ratio: 1920 / 1280) {
@@ -47,4 +66,9 @@ a {
     max-width: 48vh;
     margin: 8vh 6% 3vh auto;
   }
+}
+
+::selection {
+  color: #025064;
+  background: #fff;
 }

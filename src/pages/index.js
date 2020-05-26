@@ -8,6 +8,12 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <p className="bigger">
+        Are you a Indie developer looking for free webspace to host your portfolio?
+        <br />
+        Check out GitHub Pages. To make things perfect we provide you with a free and sleek URL as shown in the examples
+        above.
+      </p>
       <p>
         <FormattedMessage id="description" />
       </p>
