@@ -8,11 +8,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 
 import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
+  const intl = useIntl()
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,7 +27,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={intl.formatMessage({ id: "title" }) || data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
@@ -36,7 +38,9 @@ const Layout = ({ children }) => {
         <footer>
           © {new Date().getFullYear()}
           {` `}
-          <a href="https://indie.men">indie.men</a>
+          <a href="https://indie.men">
+            <FormattedMessage id="title" />
+          </a>
         </footer>
       </div>
     </>
