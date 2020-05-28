@@ -11,8 +11,11 @@ const IndexPage = () => {
       <p className="bigger">
         Are you a Indie developer looking for free webspace to host your portfolio?
         <br />
-        Check out GitHub Pages. To make things perfect we provide you with a free and sleek URL as shown in the examples
-        above.
+        Check out{" "}
+        <a title="GitHub Pages" rel="nofollow noreferrer noopener" target="_blank" href="https://pages.github.com/">
+          GitHub Pages
+        </a>
+        . To make things perfect we provide you with a free and sleek URL as shown in the examples above.
       </p>
       <p>
         <FormattedMessage id="description" />

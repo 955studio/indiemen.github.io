@@ -7,29 +7,15 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 
 import Header from "./header"
 import Footer from "./footer"
-// import "./layout.css"
 import "./style.css"
 
 const Layout = ({ children }) => {
-  const intl = useIntl()
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={intl.formatMessage({ id: "title" }) || data.site.siteMetadata.title} />
+      <Header />
       <main>{children}</main>
       <Footer />
     </>

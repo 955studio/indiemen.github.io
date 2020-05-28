@@ -8,32 +8,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `,
-  )
-
-  const metaDescription = description || site.siteMetadata.description
+  const intl = useIntl()
+  const metaTitle = intl.formatMessage({ id: "title" })
+  const metaDescription = description || intl.formatMessage({ id: "description" })
+  const author = intl.formatMessage({ id: "author" })
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: lang ?? intl.locale,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${metaTitle}`}
       meta={[
         {
           name: `description`,
@@ -57,7 +46,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: author,
         },
         {
           name: `twitter:title`,

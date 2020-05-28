@@ -1,8 +1,15 @@
+const intlMessages = {
+  en: require("./src/intl/en.json"),
+  zh: require("./src/intl/zh.json"),
+}
+const languages = Object.keys(intlMessages)
+const defaultLanguage = `en`
+
 module.exports = {
   siteMetadata: {
-    title: `INDIE.MEN`,
-    description: `The community of independent creators.`,
-    author: `@firede`,
+    languages,
+    intlMessages,
+    defaultLanguage,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,8 +17,8 @@ module.exports = {
       resolve: `gatsby-plugin-intl`,
       options: {
         path: `${__dirname}/src/intl`,
-        languages: [`en`, `zh`],
-        defaultLanguage: `en`,
+        languages,
+        defaultLanguage,
         redirect: true,
       },
     },

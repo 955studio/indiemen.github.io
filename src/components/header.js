@@ -1,22 +1,18 @@
-import { Link } from "gatsby-plugin-intl"
-import PropTypes from "prop-types"
+import { Link, useIntl } from "gatsby-plugin-intl"
 import React from "react"
 import Logo from "./logo"
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <Link to="/" title={siteTitle}>
-      <Logo />
-    </Link>
-  </header>
-)
+const Header = () => {
+  const intl = useIntl()
+  const titleText = `${intl.formatMessage({ id: "title" })} - ${intl.formatMessage({ id: "description" })}`
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+  return (
+    <header style={{ paddingBottom: 36 }}>
+      <Link to="/" title={titleText}>
+        <Logo />
+      </Link>
+    </header>
+  )
 }
 
 export default Header
