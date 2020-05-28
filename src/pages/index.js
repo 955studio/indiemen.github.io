@@ -1,5 +1,5 @@
 import React from "react"
-import { FormattedMessage, Link } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import Typewriter from "typewriter-effect"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO />
       <div style={{ fontSize: "2.2em", display: "flex", flexDirection: "row" }}>
         <span>https://</span>
         <Typewriter
@@ -33,7 +33,6 @@ const IndexPage = () => {
         <FormattedMessage id="description" />
       </p>
       <p>Status: Work in progress.</p>
-      <Link to="/terms/">Terms</Link>
     </Layout>
   )
 }
