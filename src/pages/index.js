@@ -1,6 +1,6 @@
 import React from "react"
 import { FormattedMessage, Link } from "gatsby-plugin-intl"
-
+import Typewriter from "typewriter-effect"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -8,6 +8,18 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <div style={{ fontSize: "2.2em", display: "flex", flexDirection: "row" }}>
+        <span>https://</span>
+        <Typewriter
+          options={{
+            strings: ["erik", "firede", "junmer", "treelite"],
+            autoStart: true,
+            loop: true,
+            cursorClassName: "typewriter-cursor",
+          }}
+        />
+        <span>.indie.men</span>
+      </div>
       <p className="bigger">
         Are you a Indie developer looking for free webspace to host your portfolio?
         <br />
